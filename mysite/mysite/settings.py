@@ -91,7 +91,7 @@ else:
         'NAME': 'django',
         'USER': 'suhas',
         'PASSWORD': 'Iatbfog4e',
-        'HOST': 'localhost',
+        'HOST': 'aatgi4owie4w1n.ccyeo95pwyum.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }

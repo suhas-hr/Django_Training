@@ -25,7 +25,7 @@ SECRET_KEY = '#w5o6**f4xf^a)gm(@6a6+fvt@7q^t#r++duzc(k#0f1=@m=6q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sr-django-EB-test.us-east-1.elasticbeanstalk.com','*']
+ALLOWED_HOSTS = ['sr-django-EB-test.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -77,11 +77,11 @@ if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ['aatgi4owie4w1n'],
-            'USER': os.environ['suhas'],
-            'PASSWORD': os.environ['Iatbfog4e'],
-            'HOST': os.environ['aatgi4owie4w1n.ccyeo95pwyum.us-east-1.rds.amazonaws.com'],
-            'PORT': os.environ['5432'],
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
         }
     }
 else:
@@ -91,7 +91,7 @@ else:
         'NAME': 'django',
         'USER': 'suhas',
         'PASSWORD': 'Iatbfog4e',
-        'HOST': 'aatgi4owie4w1n.ccyeo95pwyum.us-east-1.rds.amazonaws.com',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
